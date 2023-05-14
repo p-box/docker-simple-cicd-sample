@@ -69,9 +69,6 @@ jobs:
         run: |
           docker image build --target production -t temp_api_image_name:latest .
 
-      name: Make gradlew executable
-        run: chmod +x ./gradlew
-        
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
